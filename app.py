@@ -19,6 +19,7 @@ def app(modelo):
                     'histogram_variance':[entry09.get()],
                     'histogram_tendency':[entry10.get()],
                     'light_decelerations':[entry11.get()]}
+    
 
         result = modelo.predict(pd.DataFrame(elemento))[0]
         proba_result = modelo.predict_proba(pd.DataFrame(elemento))[0]
@@ -28,13 +29,13 @@ def app(modelo):
 
         if result == 1:
             label12.config(text='Classificação:\nCondições normais')
-            label13.config(text=f'Probabilidade: {proba_result[0]*100}%')
+            label13.config(text='Probabilidade: {0:.2f}%'.format(proba_result[0]*100))
         elif result == 2:
             label12.config(text='Classificação:\nCondições suspeitas')
-            label13.config(text=f'Probabilidade: {proba_result[1]*100}%')
+            label13.config(text='Probabilidade: {0:.2f}%'.format(proba_result[1]*100))
         elif result == 3:
             label12.config(text='Classificação:\nCondições patológicas')
-            label13.config(text=f'Probabilidade: {proba_result[2]*100}%')
+            label13.config(text='Probabilidade: {0:.2f}%'.format(proba_result[2]*100))
         else:
             label12.config(text='Classificação: Erro')
             label13.config(text='Probabilidade: 0%')
@@ -134,6 +135,7 @@ def app(modelo):
         print('App aberto com sucesso!')
 
         root.resizable(width=False, height=False)
+
         root.mainloop()
 
     except:
