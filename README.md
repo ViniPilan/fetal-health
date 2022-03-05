@@ -2,6 +2,8 @@
 
 **Uso da técnica de Regressão Logística para classificação de fetos em três possíveis classes:** normal, com condições suspeitas e com condições patológicas.
 
+![imagem](img.png)
+
 ### Sobre os dados
 
 *Dados:* Data set [Fetal Health Classification](https://www.kaggle.com/andrewmvd/fetal-health-classification), disponível no site Kaggle.
