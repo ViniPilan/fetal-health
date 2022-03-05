@@ -1,10 +1,4 @@
-## Planejamento
-
-1. Uso de alguma técnica de aprendizado de máquina para resolver certo problema
-2. Vídeo (máximo de 15 min) demonstrando o uso do sistema proposto
-3. Relatório explicativo sobre o que foi realizado. 
-
-Esse trabalho também deverá ser enviado ao Vinicius (email: viniciuscmgo@gmail.com)
+## Classificador Saúde Fetal
 
 **Uso da técnica de Regressão Logística para classificação de fetos em três possíveis classes:** normal, com condições suspeitas e com condições patológicas.
 
@@ -12,7 +6,7 @@ Esse trabalho também deverá ser enviado ao Vinicius (email: viniciuscmgo@gmail
 
 *Dados:* Data set [Fetal Health Classification](https://www.kaggle.com/andrewmvd/fetal-health-classification), disponível no site Kaggle.
 
-O conjnto de dados conta com 22 colunas e 2126 linhas da tabela no total, sendo que todos eles foram extraídos de exames cardiológicos e classificados por médicos obstétras experientes. As classificações são de três níveis diferentes, indicando para o feto:
+O conjunto de dados conta com 22 colunas e 2126 linhas da tabela no total, sendo que todos eles foram extraídos de exames cardiológicos e classificados por médicos obstétras experientes. As classificações são de três níveis diferentes, indicando para o feto:
 1. Condições normais
 2. Condições suspeitas
 3. Condições patológicas (doença)
@@ -45,9 +39,19 @@ fetal_health (target) | Fetal health: 1 - Normal 2 - Suspect 3 - Pathological
 
 Como forma de reduzir o alto número de colunas, foram selecionadas as colunas com mais influência na variável target da classificação (fetal_health). Essa seleção será abordada no arquivo Data_mining e as colunas selecionadas também serão explicitadas no arquivo.
 
+### Requisitos
+Foram utilizadas ao decorrer de todo o projeto as seguintes bibliotecas (versão utilizada - python 3.9):
+- Pandas
+- Numpy
+- Matplotlib
+- Seaborn
+- Sklearn
+- Pickle
+- Tkinter
+
 ### Estrutura do trabalho
 O projeto foi dividido em 04 partes:
-1. Data mining
+1. [Data mining](https://github.com/ViniPilan/fetal-health/blob/main/Data_mining.ipynb)
     1. Pré processamento dos dados
         - Limpeza e correções
         - Balanceamento
@@ -57,7 +61,7 @@ O projeto foi dividido em 04 partes:
         - Filtrando o conjunto de dados
         
         
-2. Modeling        
+2. [Modeling](https://github.com/ViniPilan/fetal-health/blob/main/Modeling.ipynb)
     - Separação e normalização dos dados
     - Treinamento do modelo
     - Avaliação do desempenho do modelo criado com relação a dados desconhecidos (Evaluation)
@@ -67,4 +71,15 @@ O projeto foi dividido em 04 partes:
     - Salvando o modelo para uso na aplicação
     
     
-3. Aplicação
+3. [Aplicação (app.py)](https://github.com/ViniPilan/fetal-health/blob/main/app.py)
+
+### Sobre o autor deste projeto
+Me chamo Vinícius de Paula Pilan, sou estudante de Ciência da Computação na Universidade Estadual Paulista - Júlio de Mesquita Filho - UNESP e tenho muito interesse em me profissionalizar na área de Ciência de Dados. Atualmente, busco aprender cada vez mais sobre o assunto e esse projeto foi um meio de adquirir ainda mais conhecimento nessa área.
+
+Agradeço pelo seu interesse nesse trabalho!
+
+Formas de contato:
+
+- Email: vinicius.pilan@unesp.br
+- LinkedIn: Vinícius de Paula Pilan
+- GitHub: ViniPilan
